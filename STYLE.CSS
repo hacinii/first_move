@@ -1,0 +1,17 @@
+#all {
+  width: 75%;
+  margin: auto;
+  zoom: 500%;
+}
+header {
+  background-color: rgb(68, 255, 0);
+}
+nav {
+  background-color: aqua;
+}
+article {
+  background-color: blueviolet;
+}
+footer {
+  background-color: chocolate;
+}
