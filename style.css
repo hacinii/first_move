@@ -1,0 +1,18 @@
+#all
+{
+    width: 90%;
+    margin: auto;
+    zoom: 250%;    
+}
+header{
+    background-color: rgb(213, 8, 107);
+}
+nav{
+    background-color: rgb(158, 217, 56);
+}
+article{
+    background-color: aqua;
+}
+footer{
+    background-color: rgb(222, 181, 17);
+}
