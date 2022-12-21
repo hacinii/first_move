@@ -3,16 +3,36 @@
     width: 90%;
     margin: auto;
     zoom: 250%;    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5px;
+    
+    grid-template-areas: 
+    "HEADER HEADER"
+    "NAV article"
+    "footer footer"
+    ;
 }
 header{
+    border-radius: 5px;
     background-color: rgb(213, 8, 107);
+    grid-area: HEADER;
 }
 nav{
+    border-radius: 5px;
     background-color: rgb(158, 217, 56);
+    grid-area: NAV;
+
 }
 article{
+    border-radius: 5px;
     background-color: aqua;
+    grid-area: article;
+
 }
 footer{
+    border-radius: 5px;
     background-color: rgb(222, 181, 17);
+    grid-area: footer;
+
 }
