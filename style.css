@@ -14,24 +14,24 @@
     ;
 }
 header{
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgb(213, 8, 107);
     grid-area: HEADER;
 }
 nav{
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgb(158, 217, 56);
     grid-area: NAV;
 
 }
 article{
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: aqua;
     grid-area: article;
 
 }
 footer{
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgb(222, 181, 17);
     grid-area: footer;
 
