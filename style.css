@@ -2,11 +2,9 @@
 {
     width: 90%;
     margin: auto;
-    zoom: 250%;    
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 5px;
-    
+    grid-gap: 10px;
     grid-template-areas: 
     "HEADER HEADER"
     "NAV article"
@@ -14,25 +12,28 @@
     ;
 }
 header{
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: rgb(213, 8, 107);
     grid-area: HEADER;
+    height: 20vh;
 }
 nav{
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: rgb(158, 217, 56);
     grid-area: NAV;
+    height: 60vh;
 
 }
 article{
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: aqua;
     grid-area: article;
+    height: 60vh;
 
 }
 footer{
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: rgb(222, 181, 17);
     grid-area: footer;
-
+    height: 20vh;
 }
