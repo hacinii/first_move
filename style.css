@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap");
 /*  body ------------grid
 {
     display: grid;
@@ -20,9 +20,9 @@ body {
   width: 100%;
   margin: auto;
   display: grid;
+  grid-gap: 1px;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 180px;
-  grid-gap: 5px;
+  grid-template-rows: 190px;
   grid-template-areas:
     "header header"
     "nav section"
@@ -31,31 +31,39 @@ body {
 }
 
 header {
-  background-color: rgb(242, 191, 99);
+  background-color: #f2bf63;
   grid-area: header;
-  background-image: url(/80.png);
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  font-family: 'Rubik Spray Paint', cursive;
+  font-family: "Rubik Spray Paint", cursive;
   font-size: 25px;
-  color: #231f20;
+  color: #464646;
   letter-spacing: 1rem;
   text-align: center;
-  }
-
+  border-bottom: 5px solid #1d1d1d;
+  justify-content: space-between;
+}
+.logo{
+  width: 20%;
+}
 header div {
   display: flex;
   width: 60%;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 section {
-  color: aliceblue;
-  border-radius: 5px;
-  background-color: rgb(255, 1, 1);
+  color: #f2bf63;
+
+  background-color: #1d1d1d;
+  font-family: "Rubik Spray Paint", cursive;
+  letter-spacing: 10px;
+  font-size: 50px;
+  padding: 20px;
+  text-align: center;
   grid-area: section;
 }
 nav {
@@ -64,18 +72,13 @@ nav {
   flex-direction: column;
   align-items: baseline;
   grid-area: nav;
-  border-radius: 5px;
 }
 
 article {
-  border-radius: 5px;
-
   background-color: aqua;
   grid-area: article;
 }
 footer {
-  border-radius: 5px;
-
   background-color: rgb(222, 181, 17);
   grid-area: footer;
 }
@@ -91,19 +94,19 @@ footer {
       "nav"
       "section"
       "article"
-      "footer"
+      "footer";
   }
-  header
-{
-  background-image: none;
-  justify-content: center;
+  header {
+    background-image: none;
+    justify-content: center;
+  }
+  header .txt {
+    display: none;
+  }
+  section {
+    display: none;
+  }
+  .logo{
+display: none;
 }
-header .txt{
-  display: none;
-}  
-section{
-  display: none;
 }
-
-}
-
