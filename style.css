@@ -1,70 +1,109 @@
-#all
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+/*  body ------------grid
 {
-    width: 1200px;
-    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 10px;
-    grid-template-areas: 
-    "HEADER HEADER"
-    "NAV article"
-    "footer footer"
-    ;
-}
-header{
-    border-radius: 5px;
-    background-color: rgb(22, 48, 177);
-    grid-area: HEADER;
+    height: 100vh;
+    place-items: center;
+} 
+body ----------------flex
+ {
     display: flex;
-    justify-content: space-around;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+} */
+body {
+  margin: 0px;
+  padding: 0px;
 }
-.flex{
-    background-color: rgb(197, 226, 8);
+#all {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 180px;
+  grid-gap: 5px;
+  grid-template-areas:
+    "header header"
+    "nav section"
+    "nav article"
+    "footer footer";
 }
-nav{
-    border-radius: 5px;
-    background-color: rgb(15, 142, 55);
-    grid-area: NAV;
+
+header {
+  background-color: rgb(242, 191, 99);
+  grid-area: header;
+  background-image: url(/80.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  font-family: 'Rubik Spray Paint', cursive;
+  font-size: 25px;
+  color: #231f20;
+  letter-spacing: 1rem;
+  text-align: center;
+  }
+
+header div {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content:space-around;
+}
+
+section {
+  color: aliceblue;
+  border-radius: 5px;
+  background-color: rgb(255, 1, 1);
+  grid-area: section;
+}
+nav {
+  background-color: rgb(15, 142, 55);
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  grid-area: nav;
+  border-radius: 5px;
+}
+
+article {
+  border-radius: 5px;
+
+  background-color: aqua;
+  grid-area: article;
+}
+footer {
+  border-radius: 5px;
+
+  background-color: rgb(222, 181, 17);
+  grid-area: footer;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 200px) {
+  #all {
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 2fr;
+    grid-gap: 5px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "section"
+      "article"
+      "footer"
+  }
+  header
+{
+  background-image: none;
+  justify-content: center;
+}
+header .txt{
+  display: none;
+}  
+section{
+  display: none;
+}
 
 }
-article{
-    border-radius: 5px;
-    background-color: aqua;
-    grid-area: article;
 
-}
-footer{
-    border-radius: 5px;
-    background-color: rgb(222, 181, 17);
-    grid-area: footer;
-}
-
-@media screen and  (max-width: 1299px)and (min-width:801px)  {
-    #all{
-        width: 80%;
-        margin: auto;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: 10px;
-        grid-template-areas: 
-        "HEADER HEADER"
-        "article NAV"
-        "footer NAV"
-        ;
-
-    } 
-}
-@media screen and  (max-width: 801px)and (min-width:250px)  {
-    #all{
-        width: 100%;
-        margin: auto;
-        grid-template-columns: 2fr;
-        grid-gap: 10px;
-        grid-template-areas: 
-        "HEADER "
-        "NAV "
-        "article"
-        "footer"
-        ;
-
-    } 
-}
