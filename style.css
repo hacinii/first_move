@@ -20,7 +20,7 @@ body {
   width: 100%;
   margin: auto;
   display: grid;
-  grid-gap: 1px;
+  grid-gap: 5px;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 190px;
   grid-template-areas:
@@ -28,8 +28,8 @@ body {
     "nav section"
     "nav article"
     "footer footer";
+  background-color: #f2bf63;
 }
-
 header {
   background-color: #f2bf63;
   grid-area: header;
@@ -42,10 +42,9 @@ header {
   color: #464646;
   letter-spacing: 1rem;
   text-align: center;
-  border-bottom: 5px solid #1d1d1d;
   justify-content: space-between;
 }
-.logo{
+.logo {
   width: 20%;
 }
 header div {
@@ -54,29 +53,52 @@ header div {
   align-items: center;
   justify-content: space-around;
 }
-
 section {
+  grid-area: section;
   color: #f2bf63;
-
   background-color: #1d1d1d;
   font-family: "Rubik Spray Paint", cursive;
   letter-spacing: 10px;
   font-size: 50px;
   padding: 20px;
   text-align: center;
-  grid-area: section;
+  border-top-left-radius: 10px;
+  margin-bottom: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 nav {
-  background-color: rgb(15, 142, 55);
+  background-color: #303030;
+  grid-area: nav;
+  padding: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+nav ul {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  grid-area: nav;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
-
+nav li {
+  list-style: none;
+  padding: 20px;
+}
+nav li a {
+  text-decoration: none;
+  color: #f2bf63;
+  font-size: 25px;
+}
+nav li :hover {
+  transition: 0.5s;
+  color: aliceblue;
+}
 article {
   background-color: aqua;
   grid-area: article;
+  border-bottom-left-radius: 10px;
 }
 footer {
   background-color: rgb(222, 181, 17);
@@ -87,8 +109,7 @@ footer {
   #all {
     width: 100%;
     margin: auto;
-    grid-template-columns: 2fr;
-    grid-gap: 5px;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "header"
       "nav"
@@ -103,10 +124,30 @@ footer {
   header .txt {
     display: none;
   }
-  section {
+
+  .logo {
     display: none;
   }
-  .logo{
-display: none;
-}
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    border-radius: 0;
+  }
+  section {
+    grid-area: section;
+    color: #f2bf63;
+    background-color: #1d1d1d;
+    font-family: "Rubik Spray Paint", cursive;
+    letter-spacing: 10px;
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: -5px;
+    border-top-left-radius: 0px;
+  }
 }
